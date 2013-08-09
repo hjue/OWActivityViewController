@@ -20,6 +20,10 @@
 /* Sina Weibo */
 "activity.SinaWeibo.title"="Sina Weibo";
 
+/* WeiChat */
+"activity.WeChat.title"="WeiChat";
+"activity.WeChatTimeline.title"="WeiChatTimeline";
+
 /* Open in Maps */
 "activity.Maps.title"="Open in Maps";
 

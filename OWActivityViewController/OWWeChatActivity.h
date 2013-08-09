@@ -1,8 +1,8 @@
 //
-// OWActivities.h
+// OWWeChatActivity.h
 // OWActivityViewController
 //
-// Copyright (c) 2013 Roman Efimov (https://github.com/romaonthego)
+// Copyright (c) 2013 Jason Hao (https://github.com/hjue )
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -23,14 +23,30 @@
 // THE SOFTWARE.
 //
 
-#import "OWFacebookActivity.h"
-#import "OWTwitterActivity.h"
-#import "OWSinaWeiboActivity.h"
-#import "OWMessageActivity.h"
-#import "OWMailActivity.h"
-#import "OWPrintActivity.h"
-#import "OWCopyActivity.h"
-#import "OWSafariActivity.h"
-#import "OWMapsActivity.h"
-#import "OWSaveToCameraRollActivity.h"
-#import "OWWeChatActivity.h"
+#import "OWActivity.h"
+
+
+enum WXMessageType {
+    
+    WXMessageTypeText   = 0,
+    WXMessageTypeImage = 1,
+    WXMessageTypeNews = 2,
+    WXMessageTypeMusic = 3,
+    WXMessageTypeVideo = 4,
+    WXMessageTypeApp = 5,
+    WXMessageTypeEmoticon = 6
+    
+};
+
+@interface OWWeChatActivity : OWActivity
+
+@property (copy, nonatomic) NSString *appId;
+
+@property (nonatomic, assign) int scene;
+
+@property (nonatomic,assign) int messageType;
+
+
+- (id)initWithAppId:(NSString *)appId messageType:(int)messageType scene:(int)scene;
+
+@end
